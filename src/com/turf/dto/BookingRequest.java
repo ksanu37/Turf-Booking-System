@@ -16,4 +16,12 @@ public class BookingRequest {
     public Booking intoInitiatedBooking() {
         return new Booking(customerId, Instant.now(), "INITIATED", slotId);
     }
+
+    public String getSlotId() {
+        return slotId;
+    }
+
+    public String getCustomerId() {
+        return customerId;
+    }
 }

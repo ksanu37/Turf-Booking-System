@@ -16,6 +16,8 @@ public class AdminController {
         return this.turfService.addTurf(turf, adminId);
     }
 
+
+
     public boolean addSlots(String turfId, List<AddSlotRequest> slotList, String adminId) {
         List<Slot> slots = slotList.stream().map(AddSlotRequest::intoSlot).toList();
         return this.turfService.addSlots(adminId, turfId, slots);

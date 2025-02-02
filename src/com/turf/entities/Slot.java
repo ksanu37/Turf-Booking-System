@@ -9,12 +9,23 @@ public class Slot {
     private OffsetDateTime endDateTime;
     private String turfId;
     private GameType gameType;
+    private String status;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
 
     public Slot(OffsetDateTime startDateTime, OffsetDateTime endDateTime, GameType gameType) {
         this.id = UUID.randomUUID().toString();
         this.startDateTime = startDateTime;
         this.endDateTime = endDateTime;
         this.gameType = gameType;
+        this.status = Status.AVAILABLE.toString();
     }
 
     public Slot(OffsetDateTime startDateTime, OffsetDateTime endDateTime, String turfId, GameType gameType) {
@@ -23,6 +34,7 @@ public class Slot {
         this.endDateTime = endDateTime;
         this.turfId = turfId;
         this.gameType = gameType;
+        this.status = Status.AVAILABLE.toString();
     }
 
     public String getId() {
@@ -59,5 +71,17 @@ public class Slot {
 
     public void setGameType(GameType gameType) {
         this.gameType = gameType;
+    }
+
+    @Override
+    public String toString() {
+        return "Slot{" +
+                "id='" + id + '\'' +
+                ", startDateTime=" + startDateTime +
+                ", endDateTime=" + endDateTime +
+                ", turfId='" + turfId + '\'' +
+                ", gameType=" + gameType +
+                ", status='" + status + '\'' +
+                '}';
     }
 }

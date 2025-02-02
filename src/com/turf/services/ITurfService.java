@@ -11,4 +11,8 @@ public interface ITurfService {
     boolean addSlots(String adminId, String TurfId, List<Slot> slotList);
 
     Turf getTurfDetails(String turfId);
+
+    boolean validateTurfAndAdmin(String turfId, String adminId);
+
+    List<Slot> getAllFutureSlotsForTurfId(String turfId);
 }

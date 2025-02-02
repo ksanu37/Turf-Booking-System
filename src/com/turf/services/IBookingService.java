@@ -7,6 +7,9 @@ import java.util.List;
 
 public interface IBookingService {
     List<Booking> getAllBookingsByTurfId(String turfId, String adminId);
-    Booking addBooking(BookingRequest bookingRequest);
+    Booking initiateBooking(BookingRequest bookingRequest);
+
+    void updateBookingStatus(String bookingId, String updatedState);
+    List<Booking> getAllBookingsForCustomer(String customerId);
 
 }

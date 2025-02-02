@@ -5,7 +5,7 @@ import com.turf.entities.Booking;
 import java.util.List;
 
 public interface BookingRepo {
-    Booking addBooking(Booking booking);
+    Booking addOrUpdateBooking(Booking booking);
 
     Booking getBookingById(String id);
 

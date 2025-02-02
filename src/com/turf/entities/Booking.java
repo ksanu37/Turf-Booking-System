@@ -53,4 +53,15 @@ public class Booking {
     public void setSlotId(String slotId) {
         this.slotId = slotId;
     }
+
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "id='" + id + '\'' +
+                ", bookedBy='" + bookedBy + '\'' +
+                ", bookedAt=" + bookedAt +
+                ", status='" + status + '\'' +
+                ", slotId='" + slotId + '\'' +
+                '}';
+    }
 }

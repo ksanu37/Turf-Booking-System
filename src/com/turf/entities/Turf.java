@@ -53,4 +53,15 @@ public class Turf {
     public void setSupportedGames(List<GameType> supportedGames) {
         this.supportedGames = supportedGames;
     }
+
+    @Override
+    public String toString() {
+        return "Turf\n{" +
+                "\n   id ='" + id + '\'' +
+                ", \n   name ='" + name + '\'' +
+                ", \n   adminId ='" + adminId + '\'' +
+                ", \n   cityName ='" + cityName + '\'' +
+                ", \n   supportedGames =" + supportedGames + "\n" +
+                '}';
+    }
 }
